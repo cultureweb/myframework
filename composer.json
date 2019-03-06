@@ -1,0 +1,20 @@
+{
+    "name": "cultureweb/myframework",
+    "description": "Cr\u0000ation d\u0000un Framework POO MVC",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ced",
+            "email": "cedric.milius@yahoo.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core",
+            "App\\": "src"
+        }
+    }
+}
