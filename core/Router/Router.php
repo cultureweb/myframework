@@ -32,13 +32,28 @@ class Router
 
         // Si la route existe déjà (teste sur le nom) alors on soulève une erreur
         if(isset($this->routes[$route->getName()])) {
-            throw new \Exception("Cette route ");
+            throw new \Exception("Cette route n' existe pas ! ");
         }
 
        $this->routes[$route->getname()] =$route;//ceci appelle l'attribut
         // Sinon on l'ajoute a la liste de nos routes !
         return $this;
     }
+    /**
+     * @param string $routeName
+     * @return Route
+     * @throws \Exception
+     */
+    public function getRoute($routeName)
+    {
+        // Si la route existe (teste sur le nom) alors on renvoie la route en question
+        if(isset($this->routes[$routeName])) {
+            return $this->routes[$routeName];
+        }
+        // Sinon on soulève une erreur
+        throw new \Exception("Cette route n'existe pas !");
+    }
+
     /**
      * @return mixed
      * @throws \Exception

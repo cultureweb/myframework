@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 class TestsController extends AppController
 {
@@ -6,8 +7,16 @@ class TestsController extends AppController
     {
         echo 'Hello world !';
     }
+
     public function bar($bar)
     {
-        echo $bar;
+        return $this->render('coolpage', compact('bar'));
     }
+
+    // A vous d'implémeter la fonction !
+    public function redirection($bar)
+    {
+        $this->redirect('testsBar', ['param'=> $bar]);
+    }
+
 }
