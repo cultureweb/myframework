@@ -1,3 +1,4 @@
+<?php /* C:\wamp64\www\myframework\src\View/login.blade.php */ ?>
 
     <form method="POST">
         <div class="form-group">

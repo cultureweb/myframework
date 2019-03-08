@@ -1,16 +1,18 @@
 <?php
 
 namespace App\Controller;
-class TestsController extends AppController
+use Core\Controller;
+
+class TestsController extends Controller
 {
     public function foo()
     {
         echo 'Hello world !';
     }
 
-    public function bar($bar)
+    public function category($bar)
     {
-        return $this->render('coolpage', compact('bar'));
+      $this->render('coolpage', compact('bar'));
     }
 
     // A vous d'implémeter la fonction !

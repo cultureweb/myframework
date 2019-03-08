@@ -1,17 +1,18 @@
+<?php /* C:\wamp64\www\myframework\src\View/layout.blade.php */ ?>
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@yield('title', 'home')</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css')}}">
+    <title><?php echo $__env->yieldContent('title', 'home'); ?></title>
+    <link rel="stylesheet" href="<?php echo e(asset('css/app.css')); ?>">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-{{--<link rel="stylesheet" href="{{asset('fonts/font.css')}}"/>--}}
-    @stack('style')
+
+    <?php echo $__env->yieldPushContent('style'); ?>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    {{--<link rel="stylesheet" id="font-stroke-css" href="{{ asset('css/font-stroke.css')}}" >--}}
+    
 
 </head>
 <body>
@@ -19,7 +20,7 @@
 
 <main class="container">
 
-@yield('content')
+<?php echo $__env->yieldContent('content'); ?>
 </main>
 
 </body>

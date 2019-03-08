@@ -21,7 +21,8 @@ abstract class Controller
     /**
      * @var Request
      */
-    private $request;
+    protected $request;
+
     /**
      * @var Router
      */
